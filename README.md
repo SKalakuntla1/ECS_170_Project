@@ -40,4 +40,4 @@ The script prints **JSON**. It has loss and accuracy **each epoch**. It also pri
 python plot_history.py results_baseline.json --out convergence_baseline.png
 ```
 
-Repo: **https://github.com/SKalakuntla1/ESC_170_Project**
+Repo: **https://github.com/SKalakuntla1/ECS_170_Project**
