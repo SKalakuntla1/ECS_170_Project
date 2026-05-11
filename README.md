@@ -1,6 +1,10 @@
-# ECS 170 — Stage 2 (digit MLP)
+# ECS 170 — course project code
 
-This repo is for **ECS 170 Stage 2**. We train a small neural network (MLP) on the course digit data.
+Public repo: **https://github.com/SKalakuntla1/ECS_170_Project**
+
+## Stage 2 (digit MLP)
+
+We train a small neural network (MLP) on the course digit data.
 
 **Data:** Put the instructor files **`train.csv`** and **`test.csv`** inside a folder named **`stage_2_data/`**. Those files have **no header**. Column 0 is the label. Columns 1–784 are pixels.
 
@@ -40,4 +44,13 @@ The script prints **JSON**. It has loss and accuracy **each epoch**. It also pri
 python plot_history.py results_baseline.json --out convergence_baseline.png
 ```
 
-Repo: **https://github.com/SKalakuntla1/ECS_170_Project**
+## Stage 3 (CNN: MNIST, ORL, CIFAR)
+
+Code is in the **`stage3/`** folder. Unzip `stage_3_data.zip` into `stage3/stage_3_data/` (see `stage3/README.md`), then:
+
+```bash
+cd stage3
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python train_cnn.py --dataset mnist --data_root stage_3_data --epochs 15 --out_json results_mnist.json
+```

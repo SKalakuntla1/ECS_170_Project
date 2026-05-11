@@ -4,3 +4,8 @@ __pycache__/
 .DS_Store
 stage_2_data/*.csv
 results_*.json
+stage3/.venv/
+stage3/stage_3_data/MNIST
+stage3/stage_3_data/ORL
+stage3/stage_3_data/CIFAR
+stage3/results_*.json

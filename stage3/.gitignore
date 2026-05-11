@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+stage_3_data/MNIST
+stage_3_data/ORL
+stage_3_data/CIFAR
+results_*.json
+*.png
