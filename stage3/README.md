@@ -59,6 +59,18 @@ python train_cnn.py --dataset cifar --variant wide --epochs 15 --out_json result
 python plot_history.py results_mnist_default.json --out plot_mnist.png
 ```
 
+## Stage 3 PDF (optional)
+
+Train first and save JSON as `results_mnist_stage3_pdf.json`, `results_orl_stage3_pdf.json`, `results_cifar_stage3_pdf.json`, `results_cifar_wide_stage3_pdf.json` (see `build_stage3_report_pdf.py` for exact names). Then:
+
+```bash
+pip install reportlab
+python generate_stage3_report_assets.py
+python build_stage3_report_pdf.py
+```
+
+Writes **`ECS170_Stage3_Report_Saahith_Kalakuntla.pdf`** in the parent directory of this `stage3` folder (same layout as the course workspace on disk).
+
 ## Files
 
 | File | Role |
@@ -66,5 +78,7 @@ python plot_history.py results_mnist_default.json --out plot_mnist.png
 | `datasets.py` | Load pickles → `TensorDataset` (NCHW, labels 0-based) |
 | `models.py` | `CNNMNIST`, `CNNORL`, `CNNCIFAR` |
 | `train_cnn.py` | Training loop, JSON metrics + history |
+| `build_stage3_report_pdf.py` | Build report PDF from JSON + figures |
+| `generate_stage3_report_assets.py` | Architecture + convergence PNGs for the PDF |
 
 Same code is also committed under the course repo: **https://github.com/SKalakuntla1/ECS_170_Project/tree/main/stage3**
