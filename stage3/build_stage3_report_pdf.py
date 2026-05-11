@@ -180,10 +180,10 @@ def build_pdf() -> None:
         )
     )
     for png, h in [
-        ("figure_stage3_mnist.png", 2.15 * inch),
-        ("figure_stage3_orl.png", 2.15 * inch),
-        ("figure_stage3_cifar.png", 2.15 * inch),
-        ("figure_stage3_cifar_wide.png", 2.15 * inch),
+        ("figure_stage3_mnist.png", 1.45 * inch),
+        ("figure_stage3_orl.png", 1.45 * inch),
+        ("figure_stage3_cifar.png", 1.45 * inch),
+        ("figure_stage3_cifar_wide.png", 1.45 * inch),
     ]:
         fp = ROOT / png
         if fp.is_file():
